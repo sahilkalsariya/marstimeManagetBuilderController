@@ -19,14 +19,14 @@ class _impliciteControllerState extends State<impliciteController>
     super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1500),
+      duration: Duration(milliseconds: 4000),
     );
 
     sizeAnimation = TweenSequence([
-      TweenSequenceItem(tween: Tween<double>(begin: 25,end: 300),weight: 0.5), // weight Expanded flex jevu kam kare
-      TweenSequenceItem(tween: Tween<double>(begin: 300,end: 50),weight: 2), // weight Expanded flex jevu kam kare
+      TweenSequenceItem(tween: Tween<double>(begin: 25,end: 300),weight: 0.5), // weight Expanded flex jevu kam kare // time mate
+      TweenSequenceItem(tween: Tween<double>(begin: 300,end: 50),weight: 2), // weight Expanded flex jevu kam kare // time
       TweenSequenceItem(tween: Tween<double>(begin: 50,end: 200),weight: 2), // weight Expanded flex jevu kam kare
-      TweenSequenceItem(tween: Tween<double>(begin: 200,end: 25),weight: 0.5), // weight Expanded flex jevu kam kare
+      TweenSequenceItem(tween: Tween<double>(begin: 200,end: 100),weight: 0.5), // weight Expanded flex jevu kam kare
     ]).animate(animationController);
     colorAnimation = ColorTween(begin: Colors.red, end: Colors.amber).animate(
       // animationController << khali aa lakhvathi banne sathe thai time managment ni jarur no pde
